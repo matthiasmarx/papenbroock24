@@ -55,7 +55,7 @@
 .template_wrapper#top_wrapper
     .template_header_item 
 
-        a
+        > a
             border: 0
             background: transparent
             height: auto
@@ -117,3 +117,60 @@
 
 .popup_content_account 
     top: 74px
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+// Suche Header
+
+#template_search_form
+    border-radius: 4px
+    input, select
+        font-family: $regular
+
+    .ajax_search_text
+        &::placeholder
+            font-family: $condensed
+            text-transform: uppercase
+
+    #template_search_submit
+        border: 0
+    #template_search_submit, .ajax_search_text
+        border-radius: 0 4px 4px 0
+    select.ajax_search_text
+        border-radius:  4px 0 0 4px 
+
+#template_header .template_header_item #template_search_submit .mdi
+    color: $white
+
+.template_wrapper#top_wrapper .template_header_item  
+    .ajax_search_results
+        padding: 0
+
+        a 
+            *
+                color: $text
+        a.cap.show_all
+            background: $blue
+            color: #fff
+            display: flex
+            justify-content: center
+            transition: ease all 400ms
+
+            .mdi
+                color: $white
+            &:hover
+                background: $darkblue
+
+        .suggestcontainer
+            a.as.as_active
+                background: $blue
+                *
+                    color: $white
+                &::after
+                    border-left-color: $blue
+
+        .ap_active
+            border-right-color: $blue
+            background: $lightbg
