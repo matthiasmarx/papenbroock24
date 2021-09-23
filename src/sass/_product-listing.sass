@@ -1,7 +1,9 @@
-.template_sidebar_container
-    background: $white
 
+/*------------------------------------------------------------------------------------------------------------------------*/
+// Sidebar
     
+.template_sidebar_container
+    background: $white 
     
     h4
         background: $cd-blue
@@ -47,4 +49,63 @@
 
                     &.active
                         background: $blue
+
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+// Products
+#template_center_column
+
+    .user_content 
+        margin-bottom: 10px
+        background: $white
+        padding: 2em
+
+        &:first-child
+            padding: 4em
+
+        p:first-child
+            margin-top: 0
+        img
+            display: block
+
+        ~ p[style="clear:both;"]
+            margin: 0
+
+#template_center_column .breadcrumbs ~ .user_content:first-child
+    padding: 0
+
+.cat_outer_frame
+    background: $white
+    padding: 0
+    position: relative
+    border: 0
+    margin-right: 20px
+    margin-left: 0
+    width: calc(33.33% - 20px)
+    transition: ease all 300ms
+
+    &:nth-child(3n)
+        margin-right: 0
+        width: 33.33%
+
+    &:hover
+        border: 0
+        box-shadow: 0 0 20px rgba(0,0,0,.2)
+        .cat_image_frame .cat_title_frame
+            background-color: $blue
+            color: $white
+            border-bottom-color: $cd-blue
+
+
+    .cat_image_frame 
+        height: calc(100% - 40px)
+        .cat_title_frame
+            border: 0
+            background-color: $white
+            opacity: 1
+            top: auto
+            bottom: 0
+            position: absolute
+            border-bottom: 4px solid transparent
+            transition: ease all 300ms
 

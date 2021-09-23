@@ -1,0 +1,98 @@
+#template_header #template_main_nav .template_wgprev_heading
+    color: $text
+#template_header #template_main_nav
+        
+    .popup_div
+        padding: 0
+        border-bottom: 4px solid $blue
+        .template_nav_span
+            .template_wgprev_heading
+                position: relative
+                padding: 3px 30px
+                border-bottom: 1px solid $border
+                border-right: 1px solid $border
+                box-sizing: border-box
+
+                &:hover
+                    background: $blue
+                    color: $white !important
+                    border-bottom-color: $blue
+
+                &:hover i.mdi.mdi-chevron-right::before
+                    filter: grayscale(1) brightness(100)
+                
+                i.mdi.mdi-chevron-right
+                    opacity: 1
+                    visibility: visible
+
+                    &::before
+                        content:""
+                        transform: translateY(-50%)
+                        background-size: contain
+                        background-position: center
+                        background-repeat: no-repeat
+                        display: inline-block
+                        width: 22px
+                        height: 16px
+                        position: relative
+                        top: 3px
+                        left: -7px
+                        
+
+                &[title="Angebote"] > i.mdi::before
+                        background-image: url(https://www.papenbroock24.de/benutzerdaten/400250/uploads_layout_2021/angebote.png)
+
+                &[title="Elektrowerkzeuge"] > i.mdi::before
+                        background-image: url(https://www.papenbroock24.de/benutzerdaten/400250/uploads_layout_2021/elektrowerkzeuge.png)
+                
+                &[title="Handwerkzeug "] > i.mdi::before
+                        background-image: url(https://www.papenbroock24.de/benutzerdaten/400250/uploads_layout_2021/handwerkzeug.png)
+                
+                &[title="Mess- & Prüfwerkzeuge"] > i.mdi::before
+                        background-image: url(https://www.papenbroock24.de/benutzerdaten/400250/uploads_layout_2021/messwerkzeuge.png)
+                
+                &[title="Maschinenwerkzeuge"] > i.mdi::before
+                        background-image: url(https://www.papenbroock24.de/benutzerdaten/400250/uploads_layout_2021/maschinenwerkzeuge.png)
+                
+                &[title="Chemisch & Technische Produkte"] > i.mdi::before
+                        background-image: url(https://www.papenbroock24.de/benutzerdaten/400250/uploads_layout_2021/chemische-produkte.png)
+                
+                &[title="Befestigungstechnik "] > i.mdi::before
+                        background-image: url(https://www.papenbroock24.de/benutzerdaten/400250/uploads_layout_2021/befestigungstechnik.png)
+                
+                &[title="Arbeitskleidung & Arbeitsschutz"] > i.mdi::before
+                        background-image: url(https://www.papenbroock24.de/benutzerdaten/400250/uploads_layout_2021/arbeitskleidung.png)
+                
+                &[title="Betriebs- & Baustellenausstattung"] > i.mdi::before
+                        background-image: url(https://www.papenbroock24.de/benutzerdaten/400250/uploads_layout_2021/baustellenausstattung.png)
+                
+                &[title="Drucklufttechnik "] > i.mdi::before
+                        background-image: url(https://www.papenbroock24.de/benutzerdaten/400250/uploads_layout_2021/drucklufttechnik.png)
+                
+                &[title="Standardmaschinen "] > i.mdi::before
+                        background-image: url(https://www.papenbroock24.de/benutzerdaten/400250/uploads_layout_2021/standardmaschinen.png)
+                
+                &[title="Schweißen & Löten"] > i.mdi::before
+                        background-image: url(https://www.papenbroock24.de/benutzerdaten/400250/uploads_layout_2021/schweisstechnik.png)
+                
+                &[title="Garten- & Landschaftsbau"] > i.mdi::before
+                        background-image: url(https://www.papenbroock24.de/benutzerdaten/400250/uploads_layout_2021/landschaftsbau.png)
+                
+                
+            
+                ~ ul 
+                    padding-bottom: 40px
+                    li 
+                        border-bottom-color: $border
+
+                        a 
+                            font-weight: 400
+                            font-family: $regular
+                            font-size: 16px
+                            transition: ease all 400ms
+
+                            &:hover
+                                background: transparent 
+                                color: $blue
+                                text-decoration: none
+                                padding: 30px

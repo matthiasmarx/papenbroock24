@@ -73,6 +73,7 @@
                 font-weight: 900
                 font-family: $condensed
                 text-transform: uppercase
+                margin-top: 3px
 
         a > i 
             padding: 0
@@ -174,3 +175,25 @@
         .ap_active
             border-right-color: $blue
             background: $lightbg
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+// Scroll Header
+
+#sticky_menu.sticky_navi.sticky_navi_fixed
+    max-width: 100%
+    left: 0
+    height: auto
+    background: $darkblue
+    display: flex
+    align-items: center
+    z-index: 9999999
+
+    #template_logo_stickynavi 
+        max-height: 65px
+
+    .top_navi
+        width: 100% 
+        padding: .5em 1em   
