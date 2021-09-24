@@ -1,0 +1,124 @@
+.dark_caption
+    background: $blue
+    border-bottom: 3px solid $cd-blue
+    text-align: left !important
+    letter-spacing: 1.5px
+    padding: 10px 15px
+
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+// Bild Wrap
+.artdetail_image_frame
+    > center 
+        background-color: $white
+
+    .artdetail_moreimages
+        background: #EBECEF
+        margin-bottom: 25px
+        height: 80px
+
+        .artdetail_moreimages_scroller
+            height: 100%
+
+
+        .artdetail_moreimages_prev
+            background: url(https://www.papenbroock24.de/benutzerdaten/400250/uploads_layout_2021/prev-image.png) no-repeat center center $darkbg
+            background-size: 16px
+            height: 100%
+        .artdetail_moreimages_next
+            background: url(https://www.papenbroock24.de/benutzerdaten/400250/uploads_layout_2021/next-image.png) no-repeat center center $darkbg
+            background-size: 16px
+            height: 100%
+
+        .artdetail_moreimages_item
+            box-sizing: border-box
+            border: 4px solid $border
+            border-right: 4px solid $border
+            transition: ease all 400ms
+            > a
+                opacity: 1
+                background-size: cover !important
+
+            &.active
+                border-color: $blue
+            &:hover:not(.active)
+                border-color: $darkbg
+                
+
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+// Preis / BEstellen Wrap
+.artdetail_shopping 
+    background: $white
+    padding: 20px
+    box-sizing: border-box
+
+    .dark_caption 
+        text-transform: none
+        letter-spacing: 0
+        font-family: $regular
+        background: transparent 
+        padding: 0
+        color: $blue !important
+        border: 0
+        font-size: 1.4em
+
+.artdetail_shopping_content
+    padding-top: 20px
+    background: $white
+    box-sizing: border-box
+
+    
+
+
+
+
+// Netto Preis
+.preisdiv table tbody > tr:first-child td:nth-child(2) font
+    font-weight: 700
+    color: $text
+
+// Bruttto Preis
+span.preis_list_preis.active_preis   
+    color: $darkred
+
+
+
+// Warenkorb button
+#addWarenkorbButton
+    background: $red
+    border-bottom: 2px solid $darkred
+    font-family: $condensed
+    text-transform: none
+    font-size: 16px
+    font-weight: 400
+    letter-spacing: .5px
+
+    &:hover
+        background: $blue
+        border-bottom-color: $cd-blue
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+// Tabellen Styling
+
+.artdetail_shopping.artdetail_info8
+    table tbody 
+        td 
+            background: $lightbg !important
+            border-color: #E6E8E9 !important
+
+        > tr:first-child td
+            background: $border !important
+            > span
+                border-bottom: 0
+
+
+.shop_tabs
+    background: $white
+    border-color: #A1A7AF
+
+    > li.current a 
+        color: $blue
+        border-bottom-color: $blue
