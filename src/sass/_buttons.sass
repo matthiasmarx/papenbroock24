@@ -3,8 +3,59 @@ button.accent_button, input.accent_button, .accent_button
     border: 0
     border-bottom: 4px solid $darkblue
     color: $white
+    border-radius: 0
 
     &:hover
         background: $red
         color: $white
         border-color: $darkred
+
+
+
+input[type="submit"], input[type="button"], button, .button, .submit
+    background: $darkblue
+    color: $white
+    font-family: $condensed
+    font-weight: 500
+    letter-spacing: .4px
+    text-transform: none
+    border: 0
+    border-radius: 0
+    border-bottom: 3px solid $cd-blue
+    font-size: 16px
+
+    &:hover 
+        background: $cd-blue
+        border-bottom-color: $blue
+
+button.submit_green, input.submit_green, .submit_green, .contentBlock input[type=button], .styledForm button, .styledForm input[type=submit]
+    background: $blue
+    border-radius: 0
+
+    &:hover 
+        background: $red
+        border-bottom-color: $darkred
+
+
+.button 
+    display: inline-block 
+    width: auto
+    margin-top: 10px
+    background-color: $blue
+    color: white
+    border-bottom: 3px solid $cd-blue
+    padding: 10px 20px
+    font-family: $condensed
+    margin-left: 0
+    margin-right: auto
+    text-decoration: none
+    transition: ease all 400ms
+
+
+
+.button-red
+    border-bottom: 3px solid $darkred
+    background-color: $red
+    &:hover 
+        background-color: $blue
+        border-bottom-color: $cd-blue

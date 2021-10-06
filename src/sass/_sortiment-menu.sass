@@ -1,10 +1,20 @@
 #template_header #template_main_nav .template_wgprev_heading
     color: $text
-#template_header #template_main_nav
+#template_header #template_main_nav, .startseite-wrapper
         
-    .popup_div
+    .popup_div, .link-nav-wrap
         padding: 0
         border-bottom: 4px solid $blue
+        li 
+                list-style: none
+                margin: 0
+                padding: 0
+                a 
+                        text-decoration: none
+                        color: $text 
+                        padding: 15px 20px 
+                        display: block
+                        
         .template_nav_span
             .template_wgprev_heading
                 position: relative
@@ -35,14 +45,14 @@
                         width: 22px
                         height: 16px
                         position: relative
-                        top: 4px
+                        top: 8px
                         left: -7px
                         
 
                 &[title="Angebote"] > i.mdi::before
                         background-image: url(https://www.papenbroock24.de/benutzerdaten/400250/uploads_layout_2021/angebote.png)
 
-                &[title="Elektrowerkzeuge"] > i.mdi::before
+                &[title="Elektrowerkzeuge "] > i.mdi::before
                         background-image: url(https://www.papenbroock24.de/benutzerdaten/400250/uploads_layout_2021/elektrowerkzeuge.png)
                 
                 &[title="Handwerkzeug "] > i.mdi::before
@@ -95,4 +105,19 @@
                                 background: transparent 
                                 color: $blue
                                 text-decoration: none
-                                padding: 30px
+                                
+
+@media only screen and (max-width: 60em)
+        #template_header #template_main_nav .template_wgprev_heading .mdi 
+                display: initial !important
+
+        #template_header #template_main_nav .template_nav_sortiment_button ul, #template_header #template_main_nav span.template_nav_span 
+                padding: 0
+        
+        #template_header #template_main_nav .popup_div .template_nav_span .template_wgprev_heading
+                padding: 5px 30px 3px 30px
+
+
+        #template_header #template_main_nav .popup_div .template_nav_span .template_wgprev_heading i.mdi.mdi-chevron-right:before
+                top: 3px
+                                        

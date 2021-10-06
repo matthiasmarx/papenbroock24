@@ -5,6 +5,7 @@
     #template_header
         max-width: 1300px
         margin: 0 auto
+        z-index: 10010
 
         .contentholder
             padding-top: 30px
@@ -189,7 +190,7 @@
     background: $darkblue
     display: flex
     align-items: center
-    z-index: 9999999
+    z-index: 99991
 
     #template_logo_stickynavi 
         max-height: 65px
@@ -198,3 +199,77 @@
         width: 100% 
         padding: .5em 1em
 
+
+
+
+@media (max-width: 960px)
+    #template_header #template_logo
+        max-width: 50%
+    #template_header 
+        #template_header_list
+            display: flex
+            flex-direction: row-reverse
+            width: 100%
+            margin-top: 0
+            .template_header_item
+                margin: 10px
+
+                &.template_nav.mobile_show
+                    background: $blue
+                    padding: 0
+                    > a.popup_toggle
+                        height: 100%
+                        width: 50px       
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        > i:before
+                            height: auto
+                            width: auto
+
+                    .popup_content_menu
+                        right: 0
+                        left: auto
+                        z-index: 999991
+
+                        &::after
+                            margin-left: 128px
+                        &::before
+                            margin-left: 124px
+
+            .popup_content_account 
+                right: -61px
+                top: 54px
+
+@media (max-width: 660px)
+    .template_wrapper#top_wrapper 
+        #template_header
+            .contentholder
+                padding-top: 10px
+            #template_logo
+                max-height: 80px
+                img 
+                    max-height: 100%
+                    width: auto
+                    max-width: auto
+
+        .sticky_navi
+            .sticky_logo_mini_position.mobile_hide_mini
+                display: none
+    #sticky_menu.sticky_navi.sticky_navi_fixed .top_navi
+        padding: .25em
+
+    .sticky_navi_fixed #template_search_form 
+        top: 0
+
+    #template_header .template_header_item > a
+        width: 40px
+    #template_header #template_header_list .template_header_item
+        display: flex
+        align-items: center
+        justify-content: center
+    .template_wrapper#top_wrapper .template_header_item a>i:before
+        height: 28px
+        width: 28px
+
+    

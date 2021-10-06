@@ -5,6 +5,9 @@
     letter-spacing: 1.5px
     padding: 10px 15px
 
+.mobile_artdetail_div
+    background: $white
+
 
 /*------------------------------------------------------------------------------------------------------------------------*/
 // Bild Wrap
@@ -98,7 +101,10 @@ span.preis_list_preis.active_preis
         background: $blue
         border-bottom-color: $cd-blue
 
+// + - Input
 
+input[type="text"], input[type="password"], input[type="number"], input[type="date"], input[type="time"]
+    font-family: $regular
 
 /*------------------------------------------------------------------------------------------------------------------------*/
 // Tabellen Styling
@@ -122,3 +128,49 @@ span.preis_list_preis.active_preis
     > li.current a 
         color: $blue
         border-bottom-color: $blue
+
+
+.artdetail_asp 
+    table tbody  > tr:nth-child(2) > td  div
+        border: 0 !important
+        
+
+
+.artdetail_sealimages_item
+    padding: 20px
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+// Dokumente
+
+
+.oxomi-border
+    border: 0
+    box-shadow: 0 0 10px rgba(0,0,0,.1)
+
+@media (min-width: 768px)
+    .oxomi-catalog 
+        margin-right: 15px
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+// In den Warenkorb PupUp
+
+.after_order_container .button
+    font-size: 15px
+
+
+
+
+.sf_lightbox_content
+    .main_caption.dark_caption
+            background: transparent
+            color: $text !important
+            border: 1px solid $blue
+            text-transform: none
+            letter-spacing: 0
+            font-weight: 300
+            background: $lightbg

@@ -1,0 +1,105 @@
+.old-intro-wrapper
+    display: none
+.sortiment-intro-wrapper
+    display: block
+    background: $white
+    width: calc(100% + 4em)
+    margin-left: -2em
+    margin-top: -2em
+    margin-bottom: -2em
+
+    .image-logo-headline-wrap
+        position: relative
+        padding: 150px 15px 15px 15px
+        width: 100%
+        display: flex
+        align-items: flex-start
+        justify-content: flex-end
+        box-sizing: border-box
+
+
+        &::before
+            content:""
+            height: 100%
+            width: 100%
+            background: black
+            opacity: .2
+            position: absolute
+            top: 0
+            left: 0
+            z-index: 1
+
+        .bg-img, .bg-img.img-fullsize
+            position: absolute
+            top: 0
+            left: 0
+            object-fit: cover
+            width: 100% !important
+            height: 100% !important
+            z-index: 0
+
+        .logo
+            position: absolute
+            top: 0
+            right: 40px
+            transform: translateY(-20px)
+            background: $white
+            padding: 15px 30px
+            z-index: 9
+            display: flex
+            align-items: center
+            justify-content: center
+            min-height: 80px
+            box-shadow: 0 0 20px rgba(0,0,0,.1)
+
+            > img 
+                max-width: 170px
+
+        .headline-wrapper
+            position: relative
+            z-index: 9
+            background: $white
+            margin: 0 auto 0 0
+            display: block
+            padding: 15px
+            width: auto
+
+            h1 
+                margin: 0
+            h1 > span
+                display: block
+                line-height: 1
+                font-family: $condensed
+
+            h1 > span:first-child
+                color: $darkblue
+                font-size: 30px
+                letter-spacing: 1px
+                text-transform: uppercase
+            h1 > span:last-child
+                color: $blue
+                font-size: 20px
+                font-weight: 400
+                letter-spacing: .3px
+
+
+    .link-wrapper
+        background: $blue
+        display: flex
+        justify-content: space-around
+        align-items: center
+        flex-wrap: wrap
+        width: 100%
+
+        a 
+            color: $white
+            text-decoration: none
+            padding: 15px
+            flex: 1
+            text-align: center
+            min-width: 20%
+            transition: ease all 300ms
+
+            &:hover 
+                background: $cd-blue
+

@@ -10,6 +10,7 @@ body #top_wrapper.template_wrapper
             .user_content
                 display: flex
                 justify-content: space-around
+                flex-wrap: wrap
                 align-items: center
                 padding: 10px
 
@@ -19,6 +20,7 @@ body #top_wrapper.template_wrapper
                     justify-content: center
                     opacity: .9
                     width: auto
+                    box-sizing: border-box
 
                     > span 
                         color: $white
@@ -32,4 +34,33 @@ body #top_wrapper.template_wrapper
                         max-height: 20px
                         width: auto
                         margin-right: 15px
+
+
+@media (max-width: 990px)
+    body #top_wrapper.template_wrapper 
+        .usp_header 
+            padding: 0
+            .contentholder
+                padding: 0
+                .user_content
+                    padding: 0
+                    .usp-header-col
+                        min-width: 33.33%
+                        padding: 7.5px
+                        flex: 1
+                        
+                        &:nth-child(4), &:nth-child(5)
+                            display: none
+
+
+    
+@media (max-width: 660px)
+    body #top_wrapper.template_wrapper 
+        .usp_header 
+            .contentholder
+                .user_content
+                    .usp-header-col
+                        &:nth-child(2)
+                            display: none
+
 
