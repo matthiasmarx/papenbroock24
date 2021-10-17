@@ -102,10 +102,24 @@
                content: ""
                background-image: url('https://www.papenbroock24.de/benutzerdaten/400250/uploads_layout_2021/account-icon.png') 
 
-        &.template_cart > a > i
-            &::before
-               content: ""
-               background-image: url('https://www.papenbroock24.de/benutzerdaten/400250/uploads_layout_2021/warenkorb-icon.png') 
+        &.template_cart
+            position: relative
+            > a > i
+                &::before
+                    content: ""
+                    background-image: url('https://www.papenbroock24.de/benutzerdaten/400250/uploads_layout_2021/warenkorb-icon.png') 
+            .template_cart_count
+                background: $red
+                top: 0
+                left: auto
+                right: 0
+                transform: translateX(-50%)
+                border-radius: 0
+                bottom: auto
+                padding: 4px
+                height: auto
+                width: auto 
+                min-width: 20px
                
 
          
@@ -118,19 +132,25 @@
         align-items: center
         justify-content: center
 
+.sortiment li a:hover
+    color: $blue
+
+
 
 /*------------------------------------------------------------------------------------------------------------------------*/
 // Account PopUp
 
 .popup_content_account 
-    right: -42px
-    top: 74px
+    right: 57px
+    top: 84px
 
 /*------------------------------------------------------------------------------------------------------------------------*/
 // Warenkorb PopUp
 
-.popup_content_account 
-    top: 74px
+.popup_content_cart
+    top: 84px
+    right: 18px
+
 
 
 
@@ -139,6 +159,7 @@
 // Suche Header
 
 #template_search_form
+    width: 100%
     border-radius: 4px
     input, select
         font-family: $regular
@@ -242,8 +263,9 @@
                             width: auto
 
                     .popup_content_menu
-                        right: 0
                         left: auto
+                        right: 130px
+                        top: 64px
                         z-index: 999991
 
                         &::after
@@ -252,8 +274,11 @@
                             margin-left: 124px
 
             .popup_content_account 
-                right: -61px
-                top: 54px
+                right: 2px
+                top: 64px
+            .popup_content_cart
+                right: 1px
+                top: 64px
 
 @media (max-width: 660px)
     .template_wrapper#top_wrapper 
