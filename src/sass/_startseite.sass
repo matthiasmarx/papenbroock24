@@ -1,9 +1,38 @@
-$logoheight: 130px
-    
+$logoheight: 100px
+#template_center_column.template_full_column
+
+    .user_content 
+        margin-bottom: 0
+        background: transparent
+        padding: 0
+
+
+
+.startseite-wrapper    
+    .startseite-white-wrapper
+        &::before, &::after
+            content:""
+            width: 12px
+            height: 100%
+            position: absolute
+            top: 0
+            background: $white
+        &::before
+            right: 100%
+        &::after
+            left: 100%
+
+
+@media (min-width: 1199px)
+    .startseite-wrapper    
+        .startseite-white-wrapper
+            &::before, &::after
+                width: 5000px
+
 .startseite-wrapper
-    max-width: 1200px
-    margin: 0 auto
-    padding: 20px
+    // max-width: 1200px
+    // margin: 0 auto
+    // padding: 20px
     * 
         box-sizing: border-box
     .head-slider-link-wrap
@@ -28,6 +57,7 @@ $logoheight: 130px
                     letter-spacing: .3px
                     font-weight: 700
                     border-right: 0
+                    font-size: 16px
 
                 li:last-child span.template_nav_span a
                         border-bottom: 0
@@ -38,6 +68,7 @@ $logoheight: 130px
 
         img 
             display: block
+            width: 100%
 
 
         .slider-wrap
@@ -49,6 +80,7 @@ $logoheight: 130px
 
     .teaser-box-wrap 
         display: flex 
+        flex-wrap: wrap
         width: 100%
 
         .teaser-box 
@@ -56,7 +88,7 @@ $logoheight: 130px
             width: calc(50% - 7.5px)
             margin-top: 15px
             z-index: 2
-            padding: 160px 25px 25px 25px
+            padding: 20% 25px 25px 25px
             
             &:nth-child(1)
                 margin-right: 7.5px
@@ -79,8 +111,8 @@ $logoheight: 130px
                 position: absolute
                 top: 0
                 left: 0
-                width: 100%
-                height: 100%
+                width: 100% !important
+                height: 100% !important  
                 object-fit: cover
                 z-index: -2
 
@@ -121,18 +153,8 @@ $logoheight: 130px
         background: $white
         position: relative
 
-        &::before, &::after
-            content:""
-            width: 5000px
-            height: 100%
-            position: absolute
-            top: 0
-            background: $white
 
-        &::before
-            right: 100%
-        &::after
-            left: 100%
+
 
 
     .top-marken-wrapper
@@ -157,10 +179,21 @@ $logoheight: 130px
                 color: $darkblue 
                 text-decoration: none
                 font-weight: 700 
-                font-size: 18px
+                font-size: 16px
                 overflow: hidden
                 transition: ease background-color 400ms
-                
+                position: relative
+                height: auto
+
+                .fw-link
+                    z-index: 9
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    top: 0
+                    left: 0
+                    > span 
+                        display: none
 
                 img 
                     display: block 
@@ -173,12 +206,13 @@ $logoheight: 130px
                     display: flex
                     flex-direction: column
                     align-items: center
+                    text-align: center
                     padding: 0 15px 15px 15px
 
                     > div
                         background: #fff
                         height: $logoheight
-                        padding: 20px
+                        padding: .75em
                         display: flex
                         align-items: center
                         justify-content: center
@@ -187,9 +221,12 @@ $logoheight: 130px
                         margin-top: calc($logoheight / 2 * -1)
                         transition: ease box-shadow 400ms
 
+                        // LOGO
                         > img 
                              max-width: 100%
+                             max-height: 100%
                              height: auto
+                             object-fit: contain
 
                     > span 
                         padding-top: 15px
@@ -204,6 +241,9 @@ $logoheight: 130px
                     .top-marke-text-wrap > span
                         color: $white
 
+.tab-wrapper 
+    padding-top: 50px
+
 // Top Marken Slider - SLick Anpassung
 
 body .top-marken-slider  .slick-prev, body .top-marken-slider  .slick-next 
@@ -212,6 +252,13 @@ body .top-marken-slider  .slick-prev, body .top-marken-slider  .slick-next
 body .top-marken-slider  .slick-next 
     transform: translate(50%, -50%)
 
+
+body .slick-next
+    &::before
+        content:"\276F"
+body .slick-prev
+    &::before
+        content:"\276E"
 
 
 .startseite-wrapper
@@ -229,6 +276,7 @@ body .top-marken-slider  .slick-next
     overflow: hidden
     > .slick-track
         display: flex
+        align-items: stretch
 
 body .slick-prev, body .slick-next 
     top: 50%
@@ -263,3 +311,119 @@ body .slick-next
 
 
 
+@media (max-width: 992px) 
+    .startseite-wrapper
+        padding: 10px
+        .head-slider-link-wrap
+                flex-direction: column-reverse
+                padding-bottom: 15px
+
+                .link-nav-wrap, .slider-box-wrap
+                    width: 100%
+                    margin: 0
+                    margin-bottom: 15px
+
+                .link-nav-wrap 
+                    background: transparent
+                    nav ul 
+                        display: flex
+                        flex-wrap: wrap
+                        align-items: stretch
+                        justify-content: center
+
+                        li 
+                            flex: 1
+                            min-width: 280px
+                            &:nth-child(1)
+                                display: none
+                            
+                            > span > a
+                                background: #fff
+                                height: 100%
+                                border: 5px solid $lightbg
+
+// Tabs 
+.tab-navigation
+    width: 100%
+    background: $lightbg
+    border-bottom: $darkbg 3px solid 
+    margin-bottom: 40px
+
+    button 
+        
+        background: transparent
+        color: $text 
+        border-bottom: 3px solid $darkbg
+        margin-bottom: -3px
+        text-transform: uppercase 
+        font-weight: 700
+        letter-spacing: 1px 
+        padding: 1em 2em
+        cursor: pointer 
+        &.active 
+            border-bottom-color: $blue
+            color: $blue
+        &:hover:not(.active) 
+            color: $cd-blue
+            border-bottom-color: $cd-blue
+
+@media (min-width: 992px)
+    .tab-contents
+        .tab
+            display: flex 
+            align-items: flex-start
+            flex-wrap: wrap 
+        > .tab > div 
+            width: 60%
+        > .tab img
+            padding: 0 2em 
+            max-width: 40%  
+
+
+.tab-contents
+    padding-bottom: 50px
+    > .tab img
+        height: auto
+        width: auto
+        display: block
+        
+
+    ul li 
+        list-style: "✓"
+    .tab:not(.active)
+        display: none
+    
+
+@media (max-width: 660px)
+    $logoheight: 60px
+    .startseite-wrapper .teaser-box-wrap .teaser-box
+        width: 100%
+        margin: 0 !important
+        margin-top: 15px !important
+
+    .startseite-wrapper .top-marken-wrapper
+        padding-top: 10px
+
+    body .top-marken-slider .slick-prev
+        transform: translate(-25%,-50%) 
+    body .top-marken-slider .slick-next
+        transform: translate(25%,-50%)
+    
+
+    .startseite-wrapper .top-marken-wrapper .top-marken-slider .top-marke .top-marke-text-wrap
+        > span 
+            font-size: 12px
+        > div 
+            height: $logoheight
+            margin-top: calc($logoheight / 2 * -1)
+
+    
+
+    // SLICK 
+
+    body .slick-next:before, body .slick-prev:before
+        font-size: 25px
+
+    body .slick-next, body .slick-prev
+        height: 50px
+        width: 30px
