@@ -72,7 +72,7 @@
             *
                 color: $white
             
-            .template_account_desc span , .template_cart_desc
+            .template_account_desc , .template_cart_desc
                 display: block
                 margin-right: 0
                 font-weight: 900
@@ -81,8 +81,12 @@
                 margin-top: 8px
                 letter-spacing: .25px
                 line-height: 1
-            .template_account_desc
-                margin-top: 0
+            .template_account_desc > span
+                font-weight: 900
+                font-family: $condensed
+                letter-spacing: .25px
+                line-height: 1
+                text-transform: uppercase
 
         a > i 
             padding: 0
@@ -141,7 +145,7 @@
 // Account PopUp
 
 .popup_content_account 
-    right: 57px
+    right: -42px
     top: 84px
 
 /*------------------------------------------------------------------------------------------------------------------------*/
@@ -274,7 +278,7 @@
                             margin-left: 124px
 
             .popup_content_account 
-                right: 2px
+                right: -58px
                 top: 64px
             .popup_content_cart
                 right: 1px

@@ -109,3 +109,16 @@
             border-bottom: 4px solid transparent
             transition: ease all 300ms
 
+
+@media only screen and (max-width: 768px)
+    .cat_outer_frame
+        margin-right: 10px
+        margin-left: 0
+        width: calc(50% - 10px)
+    
+    .cat_outer_frame:nth-child(3n+2) 
+        margin-right: 10px
+        width: calc(50% - 10px)
+    .cat_outer_frame:nth-child(2n+1) 
+        margin-right: 0
+        width: 50%

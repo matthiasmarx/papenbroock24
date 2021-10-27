@@ -38,7 +38,7 @@ $logoheight: 100px
     .head-slider-link-wrap
         display: flex
         flex-wrap: wrap
-        align-items: flex-start
+        align-items: stretch
         padding-bottom: 30px
 
         .link-nav-wrap 
@@ -68,7 +68,7 @@ $logoheight: 100px
 
         img 
             display: block
-            width: 100%
+            width: 100% !important
 
 
         .slider-wrap
@@ -244,6 +244,12 @@ $logoheight: 100px
 .tab-wrapper 
     padding-top: 50px
 
+.tab-wrapper
+    h3 
+        font-size: 1.3em 
+        margin: initial
+
+
 // Top Marken Slider - SLick Anpassung
 
 body .top-marken-slider  .slick-prev, body .top-marken-slider  .slick-next 
@@ -370,9 +376,13 @@ body .slick-next
 @media (min-width: 992px)
     .tab-contents
         .tab
-            display: flex 
-            align-items: flex-start
-            flex-wrap: wrap 
+            // display: flex 
+            // align-items: flex-start
+            // flex-wrap: wrap 
+        .tab > p
+            font-size: 14px
+            line-height: 1.6
+            max-width: 890px
         > .tab > div 
             width: 60%
         > .tab img

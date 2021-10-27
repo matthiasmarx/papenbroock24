@@ -248,23 +248,21 @@ position: relative;
 }
 }
 
-@media only screen and (max-width: 45em)
-{
-.responsive_table_3{
-    width: 99%;
-}
-.responsive_table_2{
-    width: 99%;
-}
-.responsive_table_2:nth-child(2n+0){
-       width: 99%;
-   margin-left:0px;
-}
+@media only screen and (max-width: 45em) {
+    .responsive_table_3{
+        width: 99%;
+    }
+    .responsive_table_2{
+        width: 99%;
+    }
+    .responsive_table_2:nth-child(2n+0){
+        width: 99%;
+        margin-left:0px;
+    }
 
 }
 
-@media only screen and (max-width: 30em)
-{
+@media only screen and (max-width: 30em) {
 .responsive_table_6{
       width:47%;
   }
@@ -280,7 +278,7 @@ position: relative;
 .responsive_table_2{
     width: 99%;
 }
-
+}
 /* LFN20451406, 10/2020; Farbe Aktions-Buttons Datenschutz Popup NICHT VERAENDERN UND AM ENDE DER SHOP LAYOUT CSS STEHEN LASSEN */
 
 #accept_global_cookies {
@@ -294,3 +292,8 @@ background: #43A047;
 border-color: rgba(0,0,0,0.2);
 color: #ffffff;
 }
+
+
+
+
+
